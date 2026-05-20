@@ -1,0 +1,41 @@
+<Container version="2">
+  <Name>GroBro</Name>
+  <Repository>ghcr.io/robertzaage/grobro:latest</Repository>
+  <Registry>https://github.com/robertzaage/GroBro/pkgs/container/grobro</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/robertzaage/GroBro</Project>
+  <ReadMe>https://github.com/robertzaage/GroBro/blob/main/README.md</ReadMe>
+  <Overview/>
+  <Category>HomeAutomation:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/robertzaage/GroBro/refs/heads/main/icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <Requires/>
+  <Config Name="SOURCE_MQTT_HOST" Target="SOURCE_MQTT_HOST" Default="" Mode="" Description="Hostname or IP of the source MQTT broker (for Growatt)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SOURCE_MQTT_PORT" Target="SOURCE_MQTT_PORT" Default="7006" Mode="" Description="Port number of the source MQTT broker" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SOURCE_MQTT_TLS" Target="SOURCE_MQTT_TLS" Default="true" Mode="" Description="Set to true to enable TLS without certificate validation" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="SOURCE_MQTT_USER" Target="SOURCE_MQTT_USER" Default="grobro" Mode="" Description="Username for the source MQTT broker (if authentication is required)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="SOURCE_MQTT_PASS" Target="SOURCE_MQTT_PASS" Default="Growatt" Mode="" Description="Password for the source MQTT broker" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="TARGET_MQTT_HOST" Target="TARGET_MQTT_HOST" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="TARGET_MQTT_PORT" Target="TARGET_MQTT_PORT" Default="1883" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="TARGET_MQTT_TLS" Target="TARGET_MQTT_TLS" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="TARGET_MQTT_USER" Target="TARGET_MQTT_USER" Default="grobro" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="TARGET_MQTT_PASS" Target="TARGET_MQTT_PASS" Default="grobro" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="GROWATT_CLOUD" Target="GROWATT_CLOUD" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="GROWATT_CLOUD_CONFIG_FILTER" Target="GROWATT_CLOUD_CONFIG_FILTER" Default="true" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DEVICE_TIMEOUT" Target="DEVICE_TIMEOUT" Default="300" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="AVAILABILITY_SENSOR" Target="AVAILABILITY_SENSOR" Default="true" Mode="" Description="Requires DEVICE_TIMEOUT &amp;gt; 0. Set to true to expose availability as a dedicated online binary sensor. If false (default), the device and all its entities will be marked as " Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MAX_SLOTS" Target="MAX_SLOTS" Default="9" Mode="" Description="Set max available Slots for Battery configuration (Noah = max 9)" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="DUMP_MESSAGES" Target="DUMP_MESSAGES" Default=false" Dumps every received messages into $DUMP_DIR for later in-depth inspection." Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Appdata Path" Target="/share/GroBro/" Default="/mnt/user/appdata/grobro" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="DUMP_DIR" Target="DUMP_DIR" Default="/share/GroBro/dump" Mode="" Description="Directory to store dumped messages. Default is /share/GroBro/dump. In Addon it has to start with /share" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="TZ" Target="TZ" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">Europe/Berlin</Config>
+  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="ERROR" Mode="" Description="Sets the Logging Level. The program currently only use the levels ERROR, DEBUG, and INFO. Default is ERROR." Type="Variable" Display="always" Required="false" Mask="false">DEBUG</Config>
+  <License>MIT</License>
+</Container>
