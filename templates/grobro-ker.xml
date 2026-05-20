@@ -1,0 +1,33 @@
+<Container version="2">
+  <Name>GroBro-Ker</Name>
+  <Repository>ghcr.io/diggen85/grobro-ker:latest</Repository>
+  <Registry>https://github.com/users/Diggen85/packages/container/package/grobro-ker</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/Diggen85/GroBro-ker</Project>
+  <ReadMe>https://github.com/Diggen85/GroBro-ker/blob/main/README.md</ReadMe>
+  <Overview>Secure Mosquitto MQTT broker with integrated Certbot auto-renewal and automatic user provisioning for GroBro / Growatt needs</Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <DateInstalled>1779274070</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Needs https://github.com/robertzaage/GroBro and a public available Port 80</Requires>
+  <Config Name="Domainname" Target="CERTBOT_DOMAIN" Default="mqtt.example.de" Mode="" Description="Domain name used for the Let's Encrypt certificate." Type="Variable" Display="always" Required="false" Mask="false">mqtt.example.com</Config>
+  <Config Name="Certbot EMail" Target="CERTBOT_EMAIL" Default="admin@example.de" Mode="" Description="Email address used for Let's Encrypt registration and renewal notifications" Type="Variable" Display="always" Required="false" Mask="false">user@example.de</Config>
+  <Config Name="Growatt Serials" Target="GROWATT_SN" Default="Comma separated list of Growatt serial numbers." Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">0PVP00XXX,QMN000XXXX</Config>
+  <Config Name="GROBRO User" Target="GROBRO_USER" Default="grobro" Mode="" Description="MQTT username used for broker authentication." Type="Variable" Display="always" Required="false" Mask="false">grobro</Config>
+  <Config Name="GROBRO_Passwords" Target="GROBRO_PASS" Default="Growatt" Mode="" Description="MQTT password used for broker authentication." Type="Variable" Display="always" Required="false" Mask="false">Growatt</Config>
+  <Config Name="Letsencrypt Path" Target="/etc/letsencrypt" Default="/mnt/user/appdata/grobro-ker/letsencrypt/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/grobro-ker/letsencrypt/</Config>
+  <Config Name="Mosquito Data Patj" Target="/var/lib/mosquitto" Default="/mnt/user/appdata/grobro-ker/data/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/grobro-ker/data/</Config>
+  <Config Name="Certbot Challange Port" Target="8080" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="MQTT TLS Port" Target="7006" Default="7006" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">7006</Config>
+  <License>MIT</License>
+</Container>
