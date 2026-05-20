@@ -12,7 +12,7 @@
   <Overview>Secure Mosquitto MQTT broker with integrated Certbot auto-renewal and automatic user provisioning for GroBro / Growatt needs</Overview>
   <Category>HomeAutomation:</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/Diggen85/unraid-community-apps/refs/heads/main/templates/grobro-ker.xml</TemplateURL>
   <Icon/>
   <ExtraParams/>
   <PostArgs/>
