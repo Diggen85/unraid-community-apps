@@ -1,15 +1,98 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
-  <title id="title">Community Apps starter icon</title>
-  <desc id="desc">Replace this placeholder icon before publishing your repository.</desc>
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#2563eb" />
+    <linearGradient id="bg" x1="32" y1="24" x2="224" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00E5FF"/>
+      <stop offset="0.5" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#FF2E88"/>
     </linearGradient>
+
+    <linearGradient id="line" x1="64" y1="62" x2="192" y2="194" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DDEBFF"/>
+    </linearGradient>
+
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
-  <rect width="256" height="256" rx="48" fill="url(#bg)" />
-  <path d="M56 84c0-15.464 12.536-28 28-28h88c15.464 0 28 12.536 28 28v88c0 15.464-12.536 28-28 28H84c-15.464 0-28-12.536-28-28z" fill="none" stroke="#bfdbfe" stroke-width="12" />
-  <path d="M96 128h64" stroke="#e0f2fe" stroke-linecap="round" stroke-width="14" />
-  <path d="M128 96v64" stroke="#e0f2fe" stroke-linecap="round" stroke-width="14" />
-  <text x="128" y="228" fill="#dbeafe" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">REPLACE ME</text>
+
+  <!-- Background -->
+  <rect x="18" y="18" width="220" height="220" rx="56" fill="#080B18"/>
+  <rect x="18" y="18" width="220" height="220" rx="56" fill="url(#bg)" opacity="0.18"/>
+
+  <!-- Outer neon ring -->
+  <circle
+    cx="128"
+    cy="128"
+    r="72"
+    stroke="url(#bg)"
+    stroke-width="8"
+    opacity="0.9"
+    filter="url(#glow)"
+  />
+
+  <!-- House roof -->
+  <path
+    d="M70 122L128 76L186 122"
+    stroke="url(#line)"
+    stroke-width="14"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#glow)"
+  />
+
+  <!-- House body -->
+  <path
+    d="M86 116V178C86 184.627 91.3726 190 98 190H158C164.627 190 170 184.627 170 178V116"
+    stroke="url(#line)"
+    stroke-width="12"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Smart core -->
+  <circle
+    cx="128"
+    cy="145"
+    r="18"
+    fill="url(#bg)"
+    filter="url(#glow)"
+  />
+
+  <circle
+    cx="128"
+    cy="145"
+    r="7"
+    fill="white"
+  />
+
+  <!-- Circuit accents -->
+  <circle cx="62" cy="62" r="5" fill="#00E5FF"/>
+  <circle cx="194" cy="64" r="5" fill="#FF2E88"/>
+  <circle cx="198" cy="194" r="5" fill="#7C3AED"/>
+  <circle cx="58" cy="190" r="4" fill="#00E5FF"/>
+
+  <path d="M62 62H92" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+  <path d="M194 64H164" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+  <path d="M198 194H168" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+  <path d="M58 190H88" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+
+  <!-- Branding -->
+  <text
+    x="128"
+    y="220"
+    text-anchor="middle"
+    font-family="Inter, Segoe UI, Arial, sans-serif"
+    font-size="18"
+    font-weight="700"
+    letter-spacing="2"
+    fill="white"
+    opacity="0.92"
+  >
+    DIGGEN85
+  </text>
 </svg>
